@@ -17,7 +17,7 @@ app.post("/save",(req,res)=>{
 	let sql="insert into student values(?,?,?)";
 	con.query(sql,data,(err,result)=>{
 		if(err)			res.send(err);
-		else			rews.send(result);
+		else			res.send(result);
 	});
 });
 app.listen(9000,()=>{console.log("ready to serve @ 9000");});
